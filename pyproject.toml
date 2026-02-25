@@ -22,6 +22,7 @@ torch = "^2.9.1"
 nltk = "^3.9.2"
 spacy = "^3.8.11"
 bertviz = "^1.4.1"
+gensim = "^4.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
