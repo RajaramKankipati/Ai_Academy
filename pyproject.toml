@@ -24,6 +24,7 @@ spacy = "^3.8.11"
 bertviz = "^1.4.1"
 gensim = "^4.4.0"
 pandas = "^2.2.2"
+statsmodels = "^0.14.2"
 
 
 [tool.poetry.group.dev.dependencies]
