@@ -49,6 +49,15 @@ cell first, since the code will not run without them in this repository's sandbo
 | 25 | AutoML-Based Smart Prediction System with Deployment | CO5 |
 | 26 | MLOps Pipeline for Real-Time Fraud Detection | CO5 |
 
+## Follow-along guides
+
+Some sessions have a companion terminal-based walkthrough alongside the notebook, for
+practicing the raw commands yourself instead of running them from Python:
+
+- [`2b. DVC Follow-Along Guide.md`](2b.%20DVC%20Follow-Along%20Guide.md) — DVC basics,
+  the `get`/`import`/`update` data-management commands, and a multi-stage pipeline
+  tutorial, as a plain sequence of shell commands with explanations.
+
 ## Setup
 
 ```bash
