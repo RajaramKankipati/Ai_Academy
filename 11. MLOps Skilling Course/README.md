@@ -57,6 +57,12 @@ practicing the raw commands yourself instead of running them from Python:
 - [`2b. DVC Follow-Along Guide.md`](2b.%20DVC%20Follow-Along%20Guide.md) — DVC basics,
   the `get`/`import`/`update` data-management commands, and a multi-stage pipeline
   tutorial, as a plain sequence of shell commands with explanations.
+- [`3b. DagsHub Collaborative MLOps Follow-Along Guide.md`](3b.%20DagsHub%20Collaborative%20MLOps%20Follow-Along%20Guide.md) —
+  a two-person team workflow (Alice versions the dataset with DVC, trains, and
+  pushes; Bob pulls the code *and* the data, reviews, extends, and they jointly
+  promote the winning model) using DagsHub, GitHub, DVC, and MLflow together, with
+  an explanation of what each tool is responsible for and why none of them
+  substitutes for the others.
 
 ## Setup
 
