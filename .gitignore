@@ -4,3 +4,6 @@
 # large, not authored content, and a major source of .git bloat from repeated
 # copies left behind by folder reorganizations.
 *.pdf
+
+# Editor/IDE local settings
+.vscode/
