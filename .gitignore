@@ -3,4 +3,4 @@
 # Third-party course-material PDFs (chapter exports, lecture notes, textbooks) --
 # large, not authored content, and a major source of .git bloat from repeated
 # copies left behind by folder reorganizations.
-*.pdf
+*.pdf.vscode/
