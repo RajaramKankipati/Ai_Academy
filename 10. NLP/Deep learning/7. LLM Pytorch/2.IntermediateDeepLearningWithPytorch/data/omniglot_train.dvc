@@ -1,0 +1,6 @@
+outs:
+- md5: 30e11e9ffa78aaa0bef3876d6784cbe2.dir
+  size: 1546308
+  nfiles: 6215
+  hash: md5
+  path: omniglot_train
