@@ -1,0 +1,6 @@
+outs:
+- md5: 917909160b0d6cc1869fe905633c66e7.dir
+  size: 5533407
+  nfiles: 2
+  hash: md5
+  path: electricity_consump

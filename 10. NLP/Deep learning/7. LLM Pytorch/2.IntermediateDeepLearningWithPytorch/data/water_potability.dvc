@@ -1,0 +1,6 @@
+outs:
+- md5: b606a575bd147f83126618e60938bb86.dir
+  size: 327713
+  nfiles: 2
+  hash: md5
+  path: water_potability
