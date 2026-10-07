@@ -5,18 +5,21 @@ experiment tracking, data versioning, monitoring, containerized deployment, CI/C
 cloud ML platforms (AWS SageMaker, GCP Vertex AI), explainability, and a set of
 domain capstones that combine everything into a single pipeline.
 
-Each notebook is a self-contained, step-by-step lab: a short "what you'll build and
-why" intro, numbered steps with runnable code, and a wrap-up of what to try next.
+Each session is a self-contained, terminal-based Markdown guide that builds a small
+project from scratch: an overview of what you will build and why, numbered steps
+(virtual environment, pinned `requirements.txt`, folder structure, the scripts, the
+commands to run and their expected output), a **Common errors and fixes** table, and
+**Exercises**. Scripts are run as modules from the project root
+(`python -m src.train`), and most guides include pytest tests.
 
 ## Working locally vs. in the cloud
 
-Most sessions run fully locally with no account or credentials needed — MLflow, DVC,
-Evidently, Deepchecks, SHAP, FastAPI/Flask, and FLAML AutoML are all open-source and
-installable via `poetry install`. A handful of sessions are inherently tied to a
-specific cloud platform (AWS SageMaker, GCP Vertex AI, DagsHub, a Kubernetes cluster).
-For those, the notebook contains complete, correct code plus a clearly marked
-**"Prerequisites"** cell listing the account/credentials/hardware you need — read that
-cell first, since the code will not run without them in this repository's sandbox.
+Most sessions run fully locally with no account or credentials needed: MLflow, DVC,
+Evidently, Deepchecks, SHAP, FastAPI/Flask, BentoML and FLAML are all open-source.
+Sessions tied to a cloud platform (AWS SageMaker, GCP Vertex AI / Cloud Run /
+Cloud Build, DagsHub, GKE) still run everything up to the cloud step locally, then
+say clearly where costs start and end with a clean-up step. Read each guide's
+**Prerequisites** line first.
 
 ## Delivery plan
 
@@ -31,7 +34,7 @@ cell first, since the code will not run without them in this repository's sandbo
 | 7 | Developing and Deploying APIs for ML Models | CO2 |
 | 8 | Building and Deploying ML-Powered Web Applications using Flask and AWS SageMaker | CO3 |
 | 9 | Deploying Automated Machine Learning (AutoML) Services using AWS SageMaker | CO3 |
-| 10 | Implementing CI/CD Pipelines with GitHub Actions for MLOps | CO3 |
+| 10 | CI for ML Models with GitHub Actions | CO3 |
 | 11 | Ensuring Data and Model Integrity using Deepchecks | CO4 |
 | 12 | Scalable end-to-end MLOps pipelines using Google Vertex AI, with smart analytics and real-time model monitoring | CO4 |
 | 13 | End-to-end MLOps pipeline to deploy and monitor ML models and LLM-based applications on GCP | CO4 |
@@ -49,28 +52,10 @@ cell first, since the code will not run without them in this repository's sandbo
 | 25 | AutoML-Based Smart Prediction System with Deployment | CO5 |
 | 26 | MLOps Pipeline for Real-Time Fraud Detection | CO5 |
 
-## Follow-along guides
-
-Some sessions have a companion terminal-based walkthrough alongside the notebook, for
-practicing the raw commands yourself instead of running them from Python:
-
-- [`2b. DVC Follow-Along Guide.md`](2b.%20DVC%20Follow-Along%20Guide.md) — DVC basics,
-  the `get`/`import`/`update` data-management commands, and a multi-stage pipeline
-  tutorial, as a plain sequence of shell commands with explanations.
-- [`3b. DagsHub Collaborative MLOps Follow-Along Guide.md`](3b.%20DagsHub%20Collaborative%20MLOps%20Follow-Along%20Guide.md) —
-  a two-person team workflow (Alice versions the dataset with DVC, trains, and
-  pushes; Bob pulls the code *and* the data, reviews, extends, and they jointly
-  promote the winning model) using DagsHub, GitHub, DVC, and MLflow together, with
-  an explanation of what each tool is responsible for and why none of them
-  substitutes for the others.
-
 ## Setup
 
-```bash
-poetry install
-poetry run jupyter notebook
-```
-
-Sessions that need extra packages beyond the base `poetry install` (DVC, Evidently,
-Deepchecks, SHAP, FLAML, BentoML, boto3, google-cloud-aiplatform) say so in their own
-first code cell — install them as you reach that session rather than all up front.
+Each guide creates its own project folder and virtual environment with Python 3.11
+and installs exactly the versions it lists in its `requirements.txt`. Library versions
+differ between sessions on purpose (for example, sessions that deploy to managed
+scikit-learn containers pin the container's scikit-learn version), so keep one virtual
+environment per session rather than one for the whole course.
