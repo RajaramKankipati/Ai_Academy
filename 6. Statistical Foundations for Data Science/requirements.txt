@@ -1,0 +1,9 @@
+ucimlrepo==0.0.7
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+statsmodels==0.14.6
+scikit-learn==1.7.2
+matplotlib==3.10.8
+notebook==7.5.1
+ipykernel==6.31.0
